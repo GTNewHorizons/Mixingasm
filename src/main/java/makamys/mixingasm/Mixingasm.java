@@ -18,11 +18,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.spongepowered.asm.mixin.MixinEnvironment;
 
-@Mod(modid = Mixingasm.MODID, version = Mixingasm.VERSION)
 public class Mixingasm {
 
-    public static final String MODID = "GRADLETOKEN_MODID";
-    public static final String VERSION = "GRADLETOKEN_VERSION";
+    public static final String MODID = "mixingasm";
     public static final Logger LOGGER = LogManager.getLogger(MODID);
 
     public static void run() {
