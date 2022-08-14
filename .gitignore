@@ -29,3 +29,4 @@ bin/
 
 libs/
 /src/main/resources/mixins.mixingasm.json
+*.bat
