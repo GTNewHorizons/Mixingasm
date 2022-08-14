@@ -28,3 +28,4 @@ bin/
 .classpath
 
 libs/
+/src/main/resources/mixins.mixingasm.json
