@@ -1,6 +1,5 @@
 package makamys.mixingasm;
 
-import cpw.mods.fml.common.Mod;
 import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayList;
