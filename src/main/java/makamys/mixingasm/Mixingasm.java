@@ -9,6 +9,7 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import cpw.mods.fml.common.Mod;
 import org.apache.commons.io.IOUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -19,9 +20,11 @@ import makamys.mixingasm.api.TransformerInclusions;
 import net.minecraft.launchwrapper.IClassTransformer;
 import net.minecraft.launchwrapper.Launch;
 
+@Mod(modid = Mixingasm.MODID, version = Mixingasm.VERSION)
 public class Mixingasm {
     
-    public static final String MODID = "mixingasm";
+    public static final String MODID = "GRADLETOKEN_MODID";
+    public static final String VERSION = "GRADLETOKEN_VERSION";
     public static final Logger LOGGER = LogManager.getLogger(MODID);
     
     public static void run() {
