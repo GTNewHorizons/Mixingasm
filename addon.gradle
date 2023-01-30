@@ -1,0 +1,7 @@
+
+afterEvaluate {
+    tasks.named("reobfJar").configure {
+        // Because this mod doesn't contain any mixins, the srg file is not generated
+        extraSrgFiles.setFrom()
+    }
+}
