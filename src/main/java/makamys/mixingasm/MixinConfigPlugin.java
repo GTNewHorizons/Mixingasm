@@ -3,6 +3,7 @@ package makamys.mixingasm;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
+
 import org.spongepowered.asm.lib.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;

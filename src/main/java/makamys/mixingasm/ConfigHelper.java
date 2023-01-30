@@ -9,7 +9,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+
 import net.minecraft.launchwrapper.Launch;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -24,12 +26,9 @@ public class ConfigHelper {
     }
 
     public Path getDefaultConfigFilePath(Path relPath) throws IOException {
-        String resourceRelPath = Paths.get("assets/" + MODID + "/default_config/")
-                .resolve(relPath)
-                .toString()
+        String resourceRelPath = Paths.get("assets/" + MODID + "/default_config/").resolve(relPath).toString()
                 .replace('\\', '/');
-        URL resourceURL =
-                new Object() {}.getClass().getEnclosingClass().getClassLoader().getResource(resourceRelPath);
+        URL resourceURL = new Object() {}.getClass().getEnclosingClass().getClassLoader().getResource(resourceRelPath);
 
         switch (resourceURL.getProtocol()) {
             case "jar":
@@ -68,12 +67,8 @@ public class ConfigHelper {
                     Files.createDirectories(Paths.get(configFile.getPath()));
                     // create contents of directory as well
                     for (Object po : Files.walk(defaultConfigPath).toArray()) {
-                        Path destPath = configFile
-                                .toPath()
-                                .resolve(defaultConfigPath
-                                        .toAbsolutePath()
-                                        .relativize(((Path) po).toAbsolutePath())
-                                        .toString());
+                        Path destPath = configFile.toPath().resolve(
+                                defaultConfigPath.toAbsolutePath().relativize(((Path) po).toAbsolutePath()).toString());
                         if (Files.isRegularFile((Path) po)) {
                             if (!Files.exists(destPath) || overwrite) {
                                 copyDefaultConfigFile((Path) po, destPath);
@@ -86,8 +81,9 @@ public class ConfigHelper {
                 return false;
             }
         } else {
-            LOGGER.debug("Invalid argument for creating default config file: " + relPath.toString()
-                    + " (file is not in the config directory)");
+            LOGGER.debug(
+                    "Invalid argument for creating default config file: " + relPath.toString()
+                            + " (file is not in the config directory)");
             return false;
         }
         return true;
