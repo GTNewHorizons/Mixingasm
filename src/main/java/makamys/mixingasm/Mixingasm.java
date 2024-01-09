@@ -9,9 +9,6 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import makamys.mixingasm.api.IMixinSafeTransformer;
-import makamys.mixingasm.api.TransformerInclusions;
-
 import net.minecraft.launchwrapper.IClassTransformer;
 import net.minecraft.launchwrapper.Launch;
 
@@ -19,6 +16,9 @@ import org.apache.commons.io.IOUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.spongepowered.asm.mixin.MixinEnvironment;
+
+import makamys.mixingasm.api.IMixinSafeTransformer;
+import makamys.mixingasm.api.TransformerInclusions;
 
 public class Mixingasm {
 
